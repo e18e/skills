@@ -22,6 +22,7 @@
   "scripts": {
     "test": "node scripts/validate.mjs",
     "format": "oxfmt --write .",
+    "lint": "oxfmt --check .",
     "version": "node scripts/sync-version.mjs"
   },
   "devDependencies": {
