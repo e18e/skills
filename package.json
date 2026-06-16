@@ -1,0 +1,30 @@
+{
+  "name": "@e18e/skills",
+  "version": "0.5.0",
+  "private": true,
+  "description": "A set of skills for e18e.",
+  "keywords": [
+    "e18e",
+    "skills"
+  ],
+  "homepage": "https://github.com/e18e/skills#readme",
+  "bugs": {
+    "url": "https://github.com/e18e/skills/issues"
+  },
+  "license": "MIT",
+  "author": "James Garbutt (https://github.com/43081j)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e18e/skills.git"
+  },
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node scripts/validate.mjs",
+    "format": "oxfmt --write .",
+    "version": "node scripts/sync-version.mjs"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.55.0"
+  }
+}

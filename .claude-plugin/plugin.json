@@ -1,0 +1,13 @@
+{
+  "name": "skills",
+  "description": "A set of skills for e18e.",
+  "version": "0.5.0",
+  "author": {
+    "name": "e18e",
+    "url": "https://e18e.dev"
+  },
+  "homepage": "https://github.com/e18e/skills",
+  "repository": "https://github.com/e18e/skills",
+  "license": "MIT",
+  "keywords": ["skills", "e18e"]
+}
