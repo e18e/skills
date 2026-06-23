@@ -1,7 +1,3 @@
-// Propagates package.json#version into the plugin and marketplace manifests.
-// package.json is the source of truth; CI sets it from the release tag (e.g.
-// `npm version $TAG --no-git-tag-version`), which runs this via the `version`
-// lifecycle hook. The version in git is never bumped by hand.
 import { readFile, writeFile } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 
