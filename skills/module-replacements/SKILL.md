@@ -79,10 +79,3 @@ For each confirmed replacement:
 
 After editing, run the project's typecheck/tests/build to confirm nothing broke,
 and report what changed. Update the lockfile if dependencies changed.
-
-## Updating the dataset
-
-`vendor/` holds the `module-replacements` package copied verbatim (its compiled
-`dist` and `manifests`), produced by `scripts/vendor-replacements.ts` at the repo
-root (run `npm run build:data`). Do not edit anything under `vendor/` by hand;
-re-run the script after bumping the `module-replacements` devDependency.
