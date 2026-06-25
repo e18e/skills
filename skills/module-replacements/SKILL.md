@@ -26,7 +26,7 @@ Gather the module names used in the project, then match them against the dataset
 2. Run the matcher with the collected names:
 
    ```sh
-   node <skill-dir>/match.ts <name> <name> ...
+   node ./match.ts <name> <name> ...
    ```
 
    `<skill-dir>` is the directory containing this `SKILL.md`. With no arguments
@@ -56,7 +56,8 @@ suggesting the swap.
 
 Present the matches grouped by current module. For each, state the suggested
 replacement(s), the type/rationale in a few words, any engine caveats, and the
-`docUrl`. When several replacements are offered, lead with the `preferred` one.
+`docUrl`. When several replacements are offered, lead with the `preferred` one
+and only allow the user to choose one.
 
 Then ask the user which to apply. Do not proceed to editing until they choose.
 They may pick a subset.
