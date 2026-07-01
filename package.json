@@ -26,6 +26,6 @@
     "version": "node scripts/sync-version.mjs"
   },
   "devDependencies": {
-    "oxfmt": "^0.55.0"
+    "oxfmt": "^0.57.0"
   }
 }
