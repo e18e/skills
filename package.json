@@ -27,9 +27,9 @@
     "version": "node scripts/sync-version.mjs && npm run build:data"
   },
   "devDependencies": {
-    "@types/node": "^25.9.3",
-    "@typescript/native-preview": "^7.0.0-dev.20260618.1",
-    "module-replacements": "^3.0.0-beta.8",
-    "oxfmt": "^0.55.0"
+    "@types/node": "^26.1.1",
+    "@typescript/native-preview": "^7.0.0-dev.20260707.2",
+    "module-replacements": "^3.0.0",
+    "oxfmt": "^0.59.0"
   }
 }
