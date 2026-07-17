@@ -21,11 +21,15 @@
   "main": "index.js",
   "scripts": {
     "test": "node scripts/validate.mjs",
+    "build:data": "node scripts/vendor-replacements.ts",
     "format": "oxfmt --write .",
-    "lint": "oxfmt --check .",
-    "version": "node scripts/sync-version.mjs"
+    "lint": "oxfmt --check . && tsgo --noEmit",
+    "version": "node scripts/sync-version.mjs && npm run build:data"
   },
   "devDependencies": {
+    "@types/node": "^25.9.3",
+    "@typescript/native-preview": "^7.0.0-dev.20260618.1",
+    "module-replacements": "^3.0.0-beta.8",
     "oxfmt": "^0.55.0"
   }
 }
