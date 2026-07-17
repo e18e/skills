@@ -75,5 +75,21 @@ itself only emits ESM:
     user and confirm before rewriting, since published docs are user-facing
     and a user may want to keep a CJS example alongside the ESM one rather
     than replace it.
+  - Before the final verify, run the workspace's install command once —
+    editing `package.json`/build config across multiple packages in a
+    monorepo is a common point for the installed dependency tree to drift
+    from the lockfile (stale symlinks into a package manager's content
+    store, especially after any dependency version changed since the last
+    install). Use whichever the project already uses:
+    - pnpm: `pnpm install`
+    - npm: `npm install`
+    - Yarn: `yarn install`
+    - Bun: `bun install`
+    - Deno: no reinstall needed for `npm:`/`jsr:` specifiers under normal
+      use, but if the project vendors a lockfile-pinned cache, run
+      `deno install` (or `deno cache --reload` for a remote-module cache)
+      Doing this up front means a real MODULE_NOT_FOUND surfaces before, not
+      during, the verify step, so it isn't misattributed to the migration's
+      own edits.
   - Run the project's typecheck, tests, and build to confirm the ESM-only
     output actually works, then report what changed.
